@@ -1,0 +1,46 @@
+<?php
+/**
+* @file
+* A description of what your module does.
+ *
+*/
+
+function starkweather_entity_create_access(\Drupal\Core\Session\AccountInterface $account, array $context, $entity_bundle) {
+
+  ////dump($context);
+  dump($entity_bundle);
+
+}
+
+function starkweather_entity_access(\Drupal\Core\Entity\EntityInterface $entity, $operation, \Drupal\Core\Session\AccountInterface $account) {
+  if($operation == 'create') {
+    return AccessResult::forbidden();
+  }
+
+  if($entity->getEntityTypeId() == 'node') {
+    dump($operation);
+    dump($entity->getType());
+    dump($entity->getEntityTypeId());
+  }
+  //dump($entity->getEntityTypeId());
+  //dump($entity->getType());
+   //dump($operation);
+   //dump($entity->getEntityTypeId());
+  //dump($account->getRoles());
+  if( $entity->getEntityTypeId() == 'node' && $entity->getType() == 'article' && $operation == 'edit' && in_array('content_editor', $account->getRoles()) ) {
+    dump($entity->getType());
+    return AccessResult::forbidden();
+  }
+}
+
+/**
+ * Implements hook_help()
+ */
+
+
+/*
+public starkweather_help() {
+}
+*/
+
+

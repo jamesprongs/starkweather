@@ -1,0 +1,4 @@
+services:
+  starkweather.http_client:
+    class: Drupal\starkweather\StarkweatherController
+    arguments: ["@http_client_factory"]

@@ -1,0 +1,23 @@
+starkweather.data:
+  date:
+    type: date
+  location:
+  proximate_city_state:
+    #temperature can be both air and ground measurements
+  temperature_average:
+  temperature_high:
+  time_of_high:
+  temperature_low:
+  time_of_low:
+  wind_speed:
+  solar_radiation:
+  humidity:
+  precipitation:
+  precipitation_amount:
+  precipitation_interval:
+  lightning:
+  cloud_cover:
+  visibility:
+  weather:
+  weather_prediction:
+

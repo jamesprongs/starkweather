@@ -1,0 +1,5 @@
+name: 'Starkweather'
+type: module
+package: 'Pacheco Studios'
+description: 'Collects and records weather data. Provides an API IoT services.'
+core_version_requirement: 9.x

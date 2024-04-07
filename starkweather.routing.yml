@@ -1,0 +1,14 @@
+starkweather.help_page:
+  path: "/starkweather/help"
+  defaults:
+    _controller: '\Drupal\starkweather\Controller\StarkweatherController::helpPage'
+    _title: "Starkweather Data Page"
+  requirements:
+    _permission: "access content"
+starkweather.json:
+  path: "/starkweather/json"
+  defaults:
+    _controller: '\Drupal\starkweather\Controller\StarkweatherController::exportStarkweatherData'
+    _title: "Starkweather JSON"
+  requirements:
+    _permission: "access content"
